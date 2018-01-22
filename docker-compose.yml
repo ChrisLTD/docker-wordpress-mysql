@@ -1,0 +1,32 @@
+# Docker Compose for WordPress with Data Persistence
+#
+# Resources
+# https://medium.com/@tatemz/local-wordpress-development-with-docker-3-easy-steps-a7c375366b9
+# https://hub.docker.com/_/wordpress/
+# https://hub.docker.com/r/_/mariadb/
+# https://stackoverflow.com/a/39208187/648844
+# https://github.com/nezhar/wordpress-docker-compose
+#
+version: "2"
+services:
+  my-wpdb:
+    image: mysql:5.7
+    volumes:
+      - ./wp-data:/var/lib/mysql
+    ports:
+      - "8081:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+  my-wp:
+    image: wordpress
+    volumes:
+      - ./wp-app:/var/www/html
+    ports:
+      - "8888:80"
+    links:
+      - my-wpdb:mysql
+    environment:
+      WORDPRESS_DB_PASSWORD: root
+
+volumes:
+  wp-data:
