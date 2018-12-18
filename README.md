@@ -1,11 +1,16 @@
 # Docker Compose with WordPress, MySQL, and phpMyAdmin
 
-## prerequisites
+## Prerequisites
 - [Docker](https://docs.docker.com/install/)
 - [Docker Compose](https://docs.docker.com/compose/install/#install-compose)
 
 ## Start containers
 ```$ docker-compose up```
+
+## Docker images
+- [WordPress](https://hub.docker.com/_/wordpress/)
+- [MySQL](https://hub.docker.com/_/mysql)
+- [phpMyAdmin](https://hub.docker.com/r/phpmyadmin/phpmyadmin/)
 
 ## Created with the help of these lovely links
 - https://medium.com/@tatemz/local-wordpress-development-with-docker-3-easy-steps-a7c375366b9
