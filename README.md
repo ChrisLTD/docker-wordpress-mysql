@@ -1,8 +1,8 @@
 # Docker Compose with WordPress, MySQL, and phpMyAdmin
 
 ## prerequisites
-- Docker
-- Docker Compose
+- [Docker](https://docs.docker.com/install/)
+- [Docker Compose](https://docs.docker.com/compose/install/#install-compose)
 
 ## Start containers
 ```$ docker-compose up```
